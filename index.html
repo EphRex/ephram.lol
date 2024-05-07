@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta content="Ephram" property="og:title">
+    <meta content="Ephram" property="og:title" />
     <meta name="theme-color" content="#000000">
-    <meta content="💸" property="og:description">
-    <meta content="https://images-ext-2.discordapp.net/external/3ObLMh_DcCr2Tf_5rNzF9A7DYhEaeJcK6YnAJvmIx-o/%3Fcid%3D73b8f7b1lyczbxwgve8s882sbfpzvd77moq6g5i2qfmdsr04%26ep%3Dv1_gifs_gifId%26rid%3Dgiphy.mp4%26ct%3Dg/https/media2.giphy.com/media/S3Q0pIBbZtNux96KeH/giphy.mp4" property="og:image">
+    <meta content="💸" property="og:description" />
+    <meta content="https://images-ext-2.discordapp.net/external/3ObLMh_DcCr2Tf_5rNzF9A7DYhEaeJcK6YnAJvmIx-o/%3Fcid%3D73b8f7b1lyczbxwgve8s882sbfpzvd77moq6g5i2qfmdsr04%26ep%3Dv1_gifs_gifId%26rid%3Dgiphy.mp4%26ct%3Dg/https/media2.giphy.com/media/S3Q0pIBbZtNux96KeH/giphy.mp4" property="og:image" />
     <meta name="theme-color" content="#000000">
 
     <link rel="stylesheet" href="style.css">
@@ -22,46 +22,79 @@
     <link rel="icon" type="image/x-icon" href="logo.png">
 
     <style>
+   
         body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             font-family: 'Roboto Mono', monospace;
             background-color: #000;
             color: #fff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden
         }
 
-        #content {
-            text-align: center;
-            font-size: 1rem;
-            position: absolute;
-            bottom: 20px;
+        .fullscreen {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
-        #content h2 {
-            font-size: 0.8rem;
-            margin-bottom: 10px;
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .click-me {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 16px;
+            text-shadow: 0 0 0.10em white;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            transition: all 0.3s ease;
+        }
+
+        .click-me:hover {
+            background-color: #fff;
+            color: #000;
         }
     </style>
+
 </head>
 
 <body>
-    <div id="content">
+    <div class="fullscreen">
         <h1>EphRex</h1>
-        <span id="typed"></span>
-        <h2><span class="sparkle">@eph.txt</span></h2>
+        <br><br><br><br>
+        <span id="typed" style="font-size: 23px;"></span>
+        <br><br><br><br><br>
+        <h2><span id="typed2"></span></h2>
     </div>
 
+    <div class="overlay">
+        <label for="overlay-toggle" class="click-me" onclick="audio();video()">
+            Click me!
+        </label>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Ephram. All Rights Reserved.</p>
+    </div>
+
+    <script src="snow.js"></script>
     <script src="typed.js"></script>
     <script src="main.js"></script>
 
-    <div id="socials">
-        <a href="roblox.html">[Roblox]</a>
-        <a href="github.html">[Github]</a>
-    </div>
 </body>
 
 </html>
