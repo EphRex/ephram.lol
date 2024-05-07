@@ -21,80 +21,65 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="icon" type="image/x-icon" href="logo.png">
 
-    <style>
-   
-        body {
-            font-family: 'Roboto Mono', monospace;
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            overflow: hidden
-        }
-
-        .fullscreen {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .click-me {
-            font-family: 'Roboto Mono', monospace;
-            font-size: 16px;
-            text-shadow: 0 0 0.10em white;
-            cursor: pointer;
-            padding: 10px 20px;
-            border: 2px solid #fff;
-            transition: all 0.3s ease;
-        }
-
-        .click-me:hover {
-            background-color: #fff;
-            color: #000;
-        }
-    </style>
-
 </head>
 
-<body>
-    <div class="fullscreen">
-        <h1>EphRex</h1>
-        <br><br><br><br>
-        <span id="typed" style="font-size: 23px;"></span>
-        <br><br><br><br><br>
-        <h2><span id="typed2"></span></h2>
-    </div>
-
-    <div class="overlay">
-        <label for="overlay-toggle" class="click-me" onclick="audio();video()">
-            Click me!
-        </label>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2024 Ephram. All Rights Reserved.</p>
-    </div>
-
-    <script src="snow.js"></script>
-    <script src="typed.js"></script>
-    <script src="main.js"></script>
-
+<body oncontextmenu="false">
+    <input type="checkbox" autocomplete="off" id="overlay-toggle">
+    <audio loop="" preload="auto" id="audio">
+        <source src="audio.mp3" type="audio/mp3">
+        
+    </audio>
+    <video muted="muted" loop="" playsinline="" preload="auto" class="fullscreen bg-video" id="video">
+        <source src="<disabled>video.mp4" type="video/mp4">
+    </video>
+    <body oncontextmenu="false">
+        <input type="checkbox" autocomplete="on" id="overlay-toggle">
+        <div class="overlay fullscreen">
+            <div id="center">
+                <label for="overlay-toggle" onclick="audio();video()">
+                    <span class="hover"
+                        style="font-family: 'Roboto Mono', font-size: 75px; monospace; font-size: 0.6em;">Click me!</span>
+                </label>
+            </div>
+        </div>
+    <section class="fullscreen text-content">
+        <div id="center">
+            <h1 style="font-size: 48px; font-family: 'Roboto Mono', monospace; text-shadow: 0 0 0.20em white;">EphRex</h1>
+        </div>
+        <div id="center">
+            <br><br><br><br>
+            <span id="typed"
+                style="font-size: 23px; font-family: 'Roboto Mono', monospace; text-shadow: 0 0 0.10em white;"></span>
+        </div>
+        <div id=center>
+            <h1><span class=sparkle>@eph.txt</span></h1>
+         </div>
+               <style>@font-face{font-family:Modeseven;src:url(assets/css/modes.ttf) format('truetype')}#center h2{font-size:23px;font-family:Modeseven;text-shadow:0 0 .4em #070707}.sparkle{animation:sparkle .5s ease-in-out infinite alternate}@keyframes sparkle{0%{opacity:.5}100%{opacity:1}}</style>
+         <div id=center>
+   <br><br><br><br><br>
+            <h2><span id=typed></span></h2>
+         </div>
+         <div class=snowflakes>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+            <div class=snowflake>♰</div>
+         </div>
+         <body>
 </body>
+
+<script src="snow.js"></script>
+<script src="typed.js"></script>
+<script src="main.js"></script>
+<div id="socials">
+    <a href="roblox.html">[Roblox]</a>
+    <a href="github.html">[Github]</a>
+</div>
 
 </html>
