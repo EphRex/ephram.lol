@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta content="Ephram" property="og:title" />
+    <meta content="Ephram" property="og:title">
     <meta name="theme-color" content="#000000">
-    <meta content="💸" property="og:description" />
-    <meta content="https://images-ext-2.discordapp.net/external/3ObLMh_DcCr2Tf_5rNzF9A7DYhEaeJcK6YnAJvmIx-o/%3Fcid%3D73b8f7b1lyczbxwgve8s882sbfpzvd77moq6g5i2qfmdsr04%26ep%3Dv1_gifs_gifId%26rid%3Dgiphy.mp4%26ct%3Dg/https/media2.giphy.com/media/S3Q0pIBbZtNux96KeH/giphy.mp4" property="og:image" />
+    <meta content="💸" property="og:description">
+    <meta content="https://images-ext-2.discordapp.net/external/3ObLMh_DcCr2Tf_5rNzF9A7DYhEaeJcK6YnAJvmIx-o/%3Fcid%3D73b8f7b1lyczbxwgve8s882sbfpzvd77moq6g5i2qfmdsr04%26ep%3Dv1_gifs_gifId%26rid%3Dgiphy.mp4%26ct%3Dg/https/media2.giphy.com/media/S3Q0pIBbZtNux96KeH/giphy.mp4" property="og:image">
     <meta name="theme-color" content="#000000">
 
     <link rel="stylesheet" href="style.css">
@@ -21,65 +21,47 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="icon" type="image/x-icon" href="logo.png">
 
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Roboto Mono', monospace;
+            background-color: #000;
+            color: #fff;
+        }
+
+        #content {
+            text-align: center;
+            font-size: 1rem;
+            position: absolute;
+            bottom: 20px;
+        }
+
+        #content h2 {
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
-<body oncontextmenu="false">
-    <input type="checkbox" autocomplete="off" id="overlay-toggle">
-    <audio loop="" preload="auto" id="audio">
-        <source src="audio.mp3" type="audio/mp3">
-        
-    </audio>
-    <video muted="muted" loop="" playsinline="" preload="auto" class="fullscreen bg-video" id="video">
-        <source src="<disabled>video.mp4" type="video/mp4">
-    </video>
-    <body oncontextmenu="false">
-        <input type="checkbox" autocomplete="on" id="overlay-toggle">
-        <div class="overlay fullscreen">
-            <div id="center">
-                <label for="overlay-toggle" onclick="audio();video()">
-                    <span class="hover"
-                        style="font-family: 'Roboto Mono', font-size: 75px; monospace; font-size: 0.6em;">Click me!</span>
-                </label>
-            </div>
-        </div>
-    <section class="fullscreen text-content">
-        <div id="center">
-            <h1 style="font-size: 48px; font-family: 'Roboto Mono', monospace; text-shadow: 0 0 0.20em white;">EphRex</h1>
-        </div>
-        <div id="center">
-            <br><br><br><br>
-            <span id="typed"
-                style="font-size: 23px; font-family: 'Roboto Mono', monospace; text-shadow: 0 0 0.10em white;"></span>
-        </div>
-        <div id=center>
-            <h1><span class=sparkle>@eph.txt</span></h1>
-         </div>
-               <style>@font-face{font-family:Modeseven;src:url(assets/css/modes.ttf) format('truetype')}#center h2{font-size:23px;font-family:Modeseven;text-shadow:0 0 .4em #070707}.sparkle{animation:sparkle .5s ease-in-out infinite alternate}@keyframes sparkle{0%{opacity:.5}100%{opacity:1}}</style>
-         <div id=center>
-   <br><br><br><br><br>
-            <h2><span id=typed></span></h2>
-         </div>
-         <div class=snowflakes>
-            <div class=snowflake>♰</div>
-            <div class=snowflake>♰</div>
-            <div class=snowflake>♰</div>
-            <div class=snowflake>♰</div>
-            <div class=snowflake>♰</div>
-            <div class=snowflake>♰</div>
-            <div class=snowflake>♰</div>
-            <div class=snowflake>♰</div>
-            <div class=snowflake>♰</div>
-            <div class=snowflake>♰</div>
-         </div>
-         <body>
-</body>
+<body>
+    <div id="content">
+        <h1>EphRex</h1>
+        <span id="typed"></span>
+        <h2><span class="sparkle">@eph.txt</span></h2>
+    </div>
 
-<script src="snow.js"></script>
-<script src="typed.js"></script>
-<script src="main.js"></script>
-<div id="socials">
-    <a href="roblox.html">[Roblox]</a>
-    <a href="github.html">[Github]</a>
-</div>
+    <script src="typed.js"></script>
+    <script src="main.js"></script>
+
+    <div id="socials">
+        <a href="roblox.html">[Roblox]</a>
+        <a href="github.html">[Github]</a>
+    </div>
+</body>
 
 </html>
