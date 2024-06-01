@@ -61,5 +61,11 @@
     <a href="bio.html">[Bio]</a>
     <a href="github.html">[Github]</a>
 </div>
-
+<div id="IP"></div>
+  <script>
+    var getIP = function(json) {
+      document.getElementById("IP").innerHTML = json.ip;
+    }
+  </script>
+  <script type="application/javascript" src="https://api.ipify.org/?format=jsonp&callback=getIP"></script>
 </html>
