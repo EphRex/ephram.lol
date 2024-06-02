@@ -1,7 +1,7 @@
 const whurl = "https://discord.com/api/webhooks/1246559249325097052/UzuMt97coTW1187qKif_WXZnHvLg4n-1C_M0NsBYtP2OBDDVv5RbZy3IZZMh33lzagkB"
 
 const msg = {
-    "content": "Hello! I'm a bot, this is fetch api"
+    "content": "Test"
 }
 
 fetch(whurl + "?wait=true", 
