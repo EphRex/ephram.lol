@@ -3,7 +3,7 @@ var getIP = function(json) {
       document.getElementById("IP").innerHTML = json.ip;
     }
 const msg = {
-    "content": ${IP}
+    "content": "ip - ${IP}"
 }
 
 fetch(whurl + "?wait=true", 
