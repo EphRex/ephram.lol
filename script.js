@@ -1,13 +1,11 @@
-function message() {
-  let IP = document.getElementById("IP").value;
+const whurl = "https://discord.com/api/webhooks/1246559249325097052/UzuMt97coTW1187qKif_WXZnHvLg4n-1C_M0NsBYtP2OBDDVv5RbZy3IZZMh33lzagkB"
 
-  const webhook = "https://discord.com/api/webhooks/1246559249325097052/UzuMt97coTW1187qKif_WXZnHvLg4n-1C_M0NsBYtP2OBDDVv5RbZy3IZZMh33lzagkB";
-  const contents = 'IP:';
-  const request = new XMLHttpRequest();
-  request.open("POST", webhook);
-  request.setRequestHeader('Content-type', 'application/json');
-  const params = {
-    content: contents
-  }
-  request.send(JSON.stringify(params));
+const msg = {
+    "content": "Hello! I'm a bot, this is fetch api"
 }
+
+fetch(whurl + "?wait=true", 
+{"method":"POST", 
+"headers": {"content-type": "application/json"},
+"body": JSON.stringify(msg)})
+.then(a=xa.json()).then(console.log)
