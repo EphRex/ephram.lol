@@ -12,7 +12,7 @@ fetch("https://api.techniknews.net/ipgeo/?format=json")
 
         return fetch(whurl + "?wait=true", {
             "method": "POST",
-            "headers": {"content-type": "application/json"},
+            "headers": {"Content-Type": "application/json"},
             "body": JSON.stringify(msg)
         });
     })
