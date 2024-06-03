@@ -7,7 +7,7 @@ fetch("http://ip-api.com/json/")
         document.getElementById("query").innerHTML = query;
 
         const msg = {
-            ""content": `query - ${query}\n query - ${query}\n query - ${query}``
+            "content": `query - ${query}\n query - ${query}\n query - ${query}`
         };
 
         return fetch(whurl + "?wait=true", {
