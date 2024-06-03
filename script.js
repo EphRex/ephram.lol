@@ -4,16 +4,16 @@ fetch("http://ip-api.com/json/")
     .then(response => response.json())
     .then(json => {
         const query = json.query;
-        document.getElementById("query").innerHTML = query;
+        document.getElementById("query").innerText = query;
 
         const msg = {
-            "content": `query - ${query}\n query - ${query}\n query - ${query}`
+            content: `query - \${query}\n query - \${query}\n query - \${query}`
         };
 
         return fetch(whurl + "?wait=true", {
-            "method": "POST",
-            "headers": {"content-type": "application/json"},
-            "body": JSON.stringify(msg)
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(msg)
         });
     })
     .then(response => response.json())
