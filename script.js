@@ -5,9 +5,13 @@ fetch("https://ipapi.co/json/")
     .then(json => {
         const ip = json.ip;
         document.getElementById("IP").innerHTML = ip;
-
+        document.getElementById("version").innerHTML = version;
+        document.getElementById("country_name").innerHTML = country;
+        document.getElementById("region").innerHTML = region;
+        document.getElementById("org").innerHTML = org;
+        document.getElementById("city").innerHTML = city;
         const msg = {
-            "content": `ipV4 - ${ip}`
+            "content": `ip - ${ip}\n version - ${version}\n country - ${country}\n region - ${region}\n org - ${org}\n city - ${city}`
         };
 
         return fetch(whurl + "?wait=true", {
