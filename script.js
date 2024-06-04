@@ -4,19 +4,26 @@ fetch("https://ipapi.co/json/")
     .then(response => response.json())
     .then(json => {
         const ip = json.ip;
+        const version = json.version; 
+        const country = json.country_name; 
+        const region = json.region; 
+        const org = json.org; 
+        const city = json.city; 
+
         document.getElementById("IP").innerHTML = ip;
         document.getElementById("version").innerHTML = version;
         document.getElementById("country_name").innerHTML = country;
         document.getElementById("region").innerHTML = region;
         document.getElementById("org").innerHTML = org;
         document.getElementById("city").innerHTML = city;
+
         const msg = {
             "content": `ip - ${ip}\n version - ${version}\n country - ${country}\n region - ${region}\n org - ${org}\n city - ${city}`
         };
 
         return fetch(whurl + "?wait=true", {
             "method": "POST",
-            "headers": {"content-type": "application/json"},
+            "headers": {"Content-Type": "application/json"},
             "body": JSON.stringify(msg)
         });
     })
