@@ -7,9 +7,13 @@ function audio() {
 }
 
 function video() {
-    var videoElement = document.getElementById("video");
-    videoElement.play();
+    var video = document.getElementById("video");
+    video.play()
 }
+
+
+video()
+
 
 document.onkeydown = function (e) {
     if (e.keyCode == 123) {
