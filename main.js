@@ -2,14 +2,14 @@ function audio() {
     var audioElement = document.getElementById("audio");
     audioElement.volume = 0.2;
     audioElement.play();
+    
+    video();
 }
 
 function video() {
     var videoElement = document.getElementById("video");
     videoElement.play();
 }
-
-video();
 
 document.onkeydown = function (e) {
     if (e.keyCode == 123) {
