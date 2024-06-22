@@ -1,16 +1,11 @@
 function audio() {
     var audioElement = document.getElementById("audio");
+    var videoElement = document.getElementById("video");
     audioElement.volume = 0.2;
     audioElement.play();
-    
+    videoElement.play();
     video();
 }
-
-function video() {
-    var video = document.getElementById("video");
-    video.play()
-}
-
 
 video()
 
