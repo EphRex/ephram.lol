@@ -1,7 +1,7 @@
 function audio() {
     var audioElement = document.getElementById("audio");
     var videoElement = document.getElementById("video");
-    audioElement.volume = 0.2;
+    audioElement.volume = 0.6;
     audioElement.play();
     videoElement.play();
     video();
