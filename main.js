@@ -1,18 +1,14 @@
 function audio() {
-    var video = document.getElementById("video");
-    video.play()
+    var audioElement = document.getElementById("audio");
+    var videoElement = document.getElementById("video");
+    audioElement.volume = 0.6;
+    audioElement.play();
+    videoElement.play();
+    video();
 }
-
-function video() {
-    var audio = document.getElementById("audio");
-    audio.volume = 0.2;
-    audio.play()
-}
-
-video()
 
 document.onkeydown = function (e) {
-    if (event.keyCode == 123) {
+    if (e.keyCode == 123) {
         return false;
     }
     if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
@@ -27,25 +23,28 @@ document.onkeydown = function (e) {
     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
         return false;
     }
-}
+};
 
-let counter = 0; let Title = 'phram'; let direction = true;
-aniTitle = setInterval(function () {
-    if (counter == Title.length) direction = false;
-    if (counter == false) direction = true;
-    counter = (direction == true) ? ++counter : --counter;
-    newtitle = (counter == 0) ? "" : Title.slice(0, counter);
-    document.title = 'E' + newtitle;
-}, 400)
+let counter = 0;
+let Title = 'phram';
+let direction = true;
+
+let aniTitle = setInterval(function () {
+    if (counter === Title.length) direction = false;
+    if (counter === 0) direction = true;
+    counter = direction ? ++counter : --counter;
+    let newTitle = counter === 0 ? "" : Title.slice(0, counter);
+    document.title = 'E' + newTitle;
+}, 400);
 
 window.oncontextmenu = function () {
     return false;
-}
+};
+
 $(document).keydown(function (event) {
     if (event.keyCode == 123) {
         return false;
-    }
-    else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+    } else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
         return false;
     }
 });
