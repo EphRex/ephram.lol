@@ -119,15 +119,6 @@ a:hover {
     font-family: 'Consolas', monospace;
 }
 
-#top {
-    position: fixed;
-    top: 5%;
-    left: 40%;
-    right: 40%;
-    text-align: center;
-    font-family: 'Consolas', monospace;
-}
-
 #socials {
     position: fixed;
     top: 57.5%;
@@ -181,7 +172,3 @@ a:hover {
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
-
-
-
-

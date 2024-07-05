@@ -1,69 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta content="Ephram" property="og:title" />
-    <meta name="theme-color" content="#000000">
-    <meta content="💤🥱" property="og:description" />
-    <meta content="https://cdn.discordapp.com/attachments/1252706229902381096/1253796513973407834/video_2.mp4?ex=6677287f&is=6675d6ff&hm=4ecf1cfe40564e0df4181e1af4b0d0156cd588311170d54d8b002548367a9539&" property="og:image" />
-    <meta name="theme-color" content="#000000">
-
-    <link rel="stylesheet" href="style.css">
-
-    <title>Ephram</title>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="logo.png">
-
+<!DOCTYPE html><html><head>
+  <meta content="=" property="og:title">
+  <meta content="" property="og:description">
+  <meta content="images/xenowo_1.png" property="og:image">    
+  <meta content="#cd0e31" data-react-helmet="true" name="theme-color">
+  <link rel="icon" type="image/x-icon" href="images/xenowo.png">
+  <title>ephram.lol</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    @font-face {
+      font-family: 'Help Me';
+      src: url('fonts/HelpMe.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'Cityburn';
+      src: url('fonts/cityburn.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'artifact';
+      src: url('fonts/artifact.ttf') format('truetype');
+    }
+  </style>
 </head>
-
-<body oncontextmenu="false">
-    <input type="checkbox" autocomplete="off" id="overlay-toggle">
-    <audio loop="" preload="auto" id="audio">
-        <source src="audio.mp3" type="audio/mp3">
-    </audio>
-    <video muted="muted" loop="" playsinline="" preload="auto" class="fullscreen bg-video" id="video">
-        <source src="https://cdn.discordapp.com/attachments/1079122633557291018/1257740496285995059/video_2.mp4?ex=6685819e&is=6684301e&hm=7fd082a9c3d575f67d802310a8b3fdaf2ca96d11205fdecc7d09b6363325c9f4&" type="video/mp4">
-    </video>
-    <body oncontextmenu="false">
-        <input type="checkbox" autocomplete="on" id="overlay-toggle">
-        <div class="overlay fullscreen">
-            <div id="center">
-                <label for="overlay-toggle" onclick="audio(); video()">
-                    <span class="hover"
-                        style="font-family: 'Roboto Mono', font-size: 75px; monospace; font-size: 0.6em;">Click me!</span>
-                </label>
-            </div>
-        </div>
-    <section class="fullscreen text-content">
-        <div id="center">
-            <h1 style="font-size: 48px; font-family: 'Roboto Mono', monospace; text-shadow: 0 0 0.20em white;">EphRex</h1>
-        </div>
-        <div id="top">
-           <a href="sigma.html">[???]</a>
-        </div>
-        <div id="center">
-            <br><br><br><br>
-            <span id="typed"
-                style="font-size: 23px; font-family: 'Roboto Mono', monospace; text-shadow: 0 0 0.10em white;"></span>
-        </div>
-</body>
-
-<script src="snow.js"></script>
-<script src="typed.js"></script>
-<script src="main.js"></script>
-<div id="socials">
-    <a href="roblox.html">[Roblox]</a>
-    <a href="bio.html">[Bio]</a>
-    <a href="github.html">[Github]</a>
-</div>
 <body>
-  <script src="script.js"></script>
-</body>
-</html>
+  <div class="overlay" id="overlay">
+    <div class="proceed-button" onclick="removeOverlay(); playMusic()">proceed</div>
+  </div>
+  <div class="container">
+    <a href="https://ephram.lol/" target="_blank" style="text-decoration: none; color: #6f0000;">
+      <h1>ephram.lol</h1>
+    </a>
+	<a href="https://ephram.lol/" target="_blank" style="text-decoration: none; color: #6f0000;">
+       <h><center>Professional Skid</center></h>
+    </a>
+  </div>
+  <div id="clock">12:35:46 AM</div>
+  <script>
+    function removeOverlay() {
+      var overlay = document.getElementById("overlay");
+      overlay.style.display = "none";
+    }
+
+    function updateClock() {
+      const now = new Date();
+      const options = {
+        timeZone: 'Europe/Bucharest',
+        hour12: true,
+        hour: 'numeric',
+        minute: '2-digit',
+        second: '2-digit'
+      };
+      const formattedTime = now.toLocaleTimeString('en-US', options);
+	  
+      document.getElementById('clock').textContent = formattedTime;
+	  document.getElementById('snowflake').style.color = "#6f0000";
+    }
+
+    setInterval(updateClock, 100);
+
+    function createBloodSparks() {
+      const numSparks = Math.floor(Math.random() * 5) + 1;
+      for (let i = 0; i < numSparks; i++) {
+        const bloodSpark = document.createElement('div');
+        bloodSpark.classList.add('blood-spark');
+        bloodSpark.style.left = `${Math.random() * window.innerWidth}px`;
+		bloodSpark.style.color = "#6f0000";
+        document.body.appendChild(bloodSpark);
+        setTimeout(() => {
+          bloodSpark.remove();
+        }, 6000);
+      }
+    }
+
+    setInterval(createBloodSparks, 1000);
+  </script>
+  <div class="snowflake">Ϫ</div>
+  <div class="snowflake">Ϫ</div>
+  <div class="snowflake">Ϫ</div>
+  <div class="snowflake">Ϫ</div>
+  <div class="snowflake">Ϫ</div>
+  <div class="snowflake">Ϫ</div>
+  <div class="snowflake">Ϫ</div>
+  <div class="snowflake">Ϫ</div>
+  <div class="snowflake">Ϫ</div>
+  <div class="snowflake">Ϫ</div>
+  <div class="snowflake">Ϫ</div>
+
+
+<script>
+        function playMusic() {
+          var audio = new Audio('main.mp3');
+          audio.play();
+      }
+</script>
+  <script src="js/main.js"></script>
+  <script src="js/geek.js"></script>
+  <script src="js/disable_inspect.js"></script>
+  <script src="js/disable-devtool.min.js"></script>
+  <script src="js/funny.js"></script>
+
+
+</body></html>
