@@ -288,3 +288,12 @@ p {
 * {
     cursor: url(https://cur.cursors-4u.net/others/oth-8/oth704.cur), auto !important;
 }
+
+#socials {
+    position: fixed;
+    top: 57.5%;
+    left: 40%;
+    right: 40%;
+    text-align: center;
+    font-family: 'Cityburn', monospace;
+}
