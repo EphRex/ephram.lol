@@ -291,9 +291,10 @@ p {
 
 #socials {
     position: fixed;
+    font-size: 40px;
     top: 57.5%;
     left: 40%;
     right: 40%;
     text-align: center;
-    font-family: 'Cityburn', monospace;
+    font-family: 'artifact', monospace;
 }
